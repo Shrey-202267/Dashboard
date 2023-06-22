@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="/index.html">
+              <!-- <span class="icon"></span> -->
+              <span class="title">CRCS</span>
+            </a>
+          </li>
+          <li>
+            <a href="/index.html">
+              <span class="icon"
+                ><ion-icon name="home-outline"></ion-icon
+              ></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="/registration.html">
+              <span class="icon"
+                ><ion-icon name="tablet-portrait-outline"></ion-icon
+              ></span>
+              <span class="title">Society Registration</span>
+            </a>
+          </li>
+          <li>
+            <a href="/analytics.html">
+              <span class="icon"
+                ><ion-icon name="analytics-outline"></ion-icon
+              ></span>
+              <span class="title">Reports and Analytics </span>
+            </a>
+          </li>
+          <li>
+            <a href="/profiles.html">
+              <span class="icon"
+                ><ion-icon name="people-outline"></ion-icon
+              ></span>
+              <span class="title">Society Profiles</span>
+            </a>
+          </li>
+          <li></li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="documents-outline"></ion-icon
+              ></span>
+              <span class="title">Document Repository</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="hand-left-outline"></ion-icon
+              ></span>
+              <span class="title">Amendments and Appeals </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="cash-outline"></ion-icon
+              ></span>
+              <span class="title">Annual Returns</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="help-outline"></ion-icon
+              ></span>
+              <span class="title">Help and Support</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="chatbubble-ellipses-outline"></ion-icon
+              ></span>
+              <span class="title">Collaboration and Messaging </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="alert-outline"></ion-icon
+              ></span>
+              <span class="title">Grievance Redressal</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main">
+        <div class="topbar">
+          <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+          <div class="search">
+            <label>
+              <input type="text" placeholder="Search here" />
+              <ion-icon name="search-outline"></ion-icon>
+            </label>
+          </div>
+
+          <div class="user"></div>
+        </div>
+
+        <div class="graphbox">
+          <div class="box"><canvas id="myChart"></canvas></div>
+          <div class="box"><canvas id="earning"></canvas></div>
+        </div>
+
+        <div class="graphbox">
+          <div class="box"><canvas id="expense"></canvas></div>
+          <div class="box"><canvas id="members"></canvas></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/charts.js"></script>
+
+    <script>
+      let toggle = document.querySelector(".toggle");
+      let main = document.querySelector(".main");
+      let navigation = document.querySelector(".navigation");
+
+      toggle.onclick = function () {
+        navigation.classList.toggle("active");
+        main.classList.toggle("active");
+      };
+
+      let list = document.querySelectorAll(".navigation li");
+      function activelink() {
+        list.forEach((item) => {
+          item.classList.remove("hovered");
+          this.classList.add("hovered");
+        });
+      }
+
+      list.forEach((item) => item.addEventListener("mouseover", activelink));
+    </script>
+  </body>
+</html>

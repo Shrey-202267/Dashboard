@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="/index.html">
+              <!-- <span class="icon"></span> -->
+              <span class="title">CRCS</span>
+            </a>
+          </li>
+          <li>
+            <a href="/index.html">
+              <span class="icon"
+                ><ion-icon name="home-outline"></ion-icon
+              ></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="registration.html">
+              <span class="icon"
+                ><ion-icon name="tablet-portrait-outline"></ion-icon
+              ></span>
+              <span class="title">Society Registration</span>
+            </a>
+          </li>
+          <li>
+            <a href="/analytics.html">
+              <span class="icon"
+                ><ion-icon name="analytics-outline"></ion-icon
+              ></span>
+              <span class="title">Reports and Analytics </span>
+            </a>
+          </li>
+          <li>
+            <a href="/profiles.html">
+              <span class="icon"
+                ><ion-icon name="people-outline"></ion-icon
+              ></span>
+              <span class="title">Society Profiles</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="documents-outline"></ion-icon
+              ></span>
+              <span class="title">Document Repository</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="hand-left-outline"></ion-icon
+              ></span>
+              <span class="title">Amendments and Appeals </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="cash-outline"></ion-icon
+              ></span>
+              <span class="title">Annual Returns</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="help-outline"></ion-icon
+              ></span>
+              <span class="title">Help and Support</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="chatbubble-ellipses-outline"></ion-icon
+              ></span>
+              <span class="title">Collaboration and Messaging </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="alert-outline"></ion-icon
+              ></span>
+              <span class="title">Grievance Redressal</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main">
+        <div class="topbar">
+          <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+          <div class="search">
+            <label>
+              <input type="text" placeholder="Search here" />
+              <ion-icon name="search-outline"></ion-icon>
+            </label>
+          </div>
+
+          <div class="user"></div>
+        </div>
+
+        <div class="cardbox">
+          <div class="card">
+            <div>
+              <div class="numbers">1,250</div>
+              <div class="cardname">Total Registered Societies</div>
+            </div>
+            <div class="iconbox">
+              <ion-icon name="people-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">35</div>
+              <div class="cardname">Pending Amendments</div>
+            </div>
+            <div class="iconbox">
+              <ion-icon name="time-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">8</div>
+              <div class="cardname">Ongoing Appeals</div>
+            </div>
+            <div class="iconbox">
+              <ion-icon name="hand-left-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">$500,000</div>
+              <div class="cardname">Earnings</div>
+            </div>
+            <div class="iconbox">
+              <ion-icon name="cash-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+
+        <div class="graphbox">
+          <div class="box"><canvas id="myChart"></canvas></div>
+          <div class="box"><canvas id="earning"></canvas></div>
+        </div>
+
+        <div class="details">
+          <div class="recentorders">
+            <div class="cardheader">
+              <h2>Societies</h2>
+              <a href="#" class="btn">View All</a>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <td>Society Name</td>
+                  <td>State</td>
+                  <td>Area of operation</td>
+                  <td>Sector</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ABC Cooperative Society</td>
+                  <td>Maharashtra</td>
+                  <td>Agriculture</td>
+                  <td><span>Agricultural Cooperative</span></td>
+                </tr>
+                <tr>
+                  <td>XYZ Women's Cooperative Society</td>
+                  <td>Karnataka</td>
+                  <td>Handicrafts</td>
+                  <td><span>Artisanal Cooperative</span></td>
+                </tr>
+                <tr>
+                  <td>PQR Farmers' Cooperative Society</td>
+                  <td>Punjab</td>
+                  <td>Agriculture</td>
+                  <td><span>Agricultural Cooperative</span></td>
+                </tr>
+                <tr>
+                  <td>LMN Credit Cooperative Society</td>
+                  <td>Tamil Nadu</td>
+                  <td>Financial Services</td>
+                  <td>
+                    <span class="status delivered">Credit Cooperative</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>RST Housing Cooperative Society</td>
+                  <td>Maharashtra</td>
+                  <td>Real Estate</td>
+                  <td>
+                    <span class="status delivered">Housing Cooperative</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="recentcustomers">
+            <div class="cardheader">
+              <h2>Register Society</h2>
+            </div>
+            <div class="container2">
+              <form action="" id="Form1">
+                <h3>CREATE SOCIETY</h3>
+                <input type="text" placeholder="Society Name" required />
+                <input type="text" placeholder="Society Address" required />
+                <input type="text" placeholder="Postal Pin" required />
+
+                <div class="btn-box">
+                  <button type="button" id="Next1" style="color: white">
+                    Next
+                  </button>
+                </div>
+              </form>
+
+              <form action="" id="Form2">
+                <h3>SOCIAL LINKS</h3>
+                <input type="text" placeholder="State" required />
+                <input type="text" placeholder="District" required />
+                <!-- <input type="text" placeholder="linkedin" required> -->
+                <div class="btn-box">
+                  <button type="button" id="Back1" style="color: white">
+                    Back
+                  </button>
+                  <button type="button" id="Next2" style="color: white">
+                    Next
+                  </button>
+                </div>
+              </form>
+
+              <form action="" id="Form3">
+                <h3>PERSONAL INFO</h3>
+                <input
+                  type="text"
+                  placeholder="Date of Registration"
+                  required
+                />
+                <input type="text" placeholder="Area of Operation" required />
+                <input type="text" placeholder="Sector Type" required />
+                <div class="btn-box">
+                  <button type="button" id="Back2" style="color: white">
+                    Back
+                  </button>
+                  <button type="submit" id="" style="color: white">
+                    Submit
+                  </button>
+                </div>
+              </form>
+
+              <div class="step-row">
+                <div id="progress"></div>
+                <div class="step-col"><small>Step 1</small></div>
+                <div class="step-col"><small>Step 2</small></div>
+                <div class="step-col"><small>Step 3</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/charts.js"></script>
+    <script src="js/form.js"></script>
+
+    <script>
+      let toggle = document.querySelector(".toggle");
+      let main = document.querySelector(".main");
+      let navigation = document.querySelector(".navigation");
+
+      toggle.onclick = function () {
+        navigation.classList.toggle("active");
+        main.classList.toggle("active");
+      };
+
+      let list = document.querySelectorAll(".navigation li");
+      function activelink() {
+        list.forEach((item) => {
+          item.classList.remove("hovered");
+          this.classList.add("hovered");
+        });
+      }
+
+      list.forEach((item) => item.addEventListener("mouseover", activelink));
+    </script>
+  </body>
+</html>
